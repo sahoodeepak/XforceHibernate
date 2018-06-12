@@ -1,11 +1,12 @@
 package com.dev.factory;
 
+import com.dev.dao.HibernateImpl;
 import com.dev.dao.JDBCImpl;
 import com.dev.dao.UserInfoDAO;
 
 public class UserInfoDAOFactory {
 
-	private final static String DATABASE="jdbc";
+	private final static String DATABASE="hibe";
 	
     private static final UserInfoDAO ref=getDAO();
     
@@ -17,7 +18,9 @@ public class UserInfoDAOFactory {
     	{
     		db=new JDBCImpl();
     		
-    	}
+    	}else {
+			db=new HibernateImpl();
+		}
     	
     	return db;
     }

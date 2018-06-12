@@ -62,4 +62,10 @@ public class Userinfo {
 		Password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "Userinfo [User_id=" + User_id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", Email_id="
+				+ Email_id + ", Password=" + Password + "]";
+	}
+
 }

@@ -14,7 +14,7 @@ import com.dev.beans.Userinfo;
 public class JDBCImpl implements UserInfoDAO {
 
 	@Override
-	public boolean CreateProfile(Userinfo data) {
+	public boolean createProfile(Userinfo data) {
 
 		Connection con = null;
 		PreparedStatement pstmt1 = null;
@@ -83,7 +83,7 @@ public class JDBCImpl implements UserInfoDAO {
 	}
 
 	@Override
-	public Userinfo Login(int User_id, String Password) {
+	public Userinfo login(int User_id, String Password) {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
